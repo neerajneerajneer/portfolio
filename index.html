@@ -12,6 +12,8 @@
             --text-muted: #94a3b8;
             --accent-color: #38bdf8;
             --accent-hover: #0ea5e9;
+            --linkedin-color: #0a66c2;
+            --linkedin-hover: #004182;
         }
         
         body {
@@ -111,7 +113,8 @@
             height: 120px;
         }
 
-        button[type="submit"] {
+        button[type="submit"], .btn-linkedin {
+            display: inline-block;
             background-color: var(--accent-color);
             color: #0f172a;
             border: none;
@@ -120,11 +123,23 @@
             font-weight: bold;
             border-radius: 6px;
             cursor: pointer;
+            text-decoration: none;
             transition: background-color 0.2s;
         }
 
         button[type="submit"]:hover {
             background-color: var(--accent-hover);
+        }
+
+        .btn-linkedin {
+            background-color: var(--linkedin-color);
+            color: #ffffff;
+            margin-top: 1rem;
+        }
+
+        .btn-linkedin:hover {
+            background-color: var(--linkedin-hover);
+            color: #ffffff;
         }
 
         footer {
@@ -204,6 +219,10 @@
             <h2>Get in Touch</h2>
             <p>I am always open to discussing new opportunities, collaborations, or professional networking. Feel free to reach out!</p>
             <p><strong>Email:</strong> <a href="mailto:neerajneerajneer@gmail.com" style="color: var(--accent-color);">neerajneerajneer@gmail.com</a></p>
+            
+            <!-- Added LinkedIn Button -->
+            <p style="margin-top: 1.5rem;">Connect with me professionally:</p>
+            <a href="https://www.linkedin.com/in/nks1/?isSelfProfile=true" target="_blank" class="btn-linkedin">View My LinkedIn Profile</a>
         </section>
     </div>
 
