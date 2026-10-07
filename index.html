@@ -95,7 +95,7 @@
 
         .form-group input[type="text"],
         .form-group input[type="email"],
-        .form-group input[type="file"] {
+        .form-group textarea {
             width: 100%;
             padding: 0.75rem;
             border-radius: 6px;
@@ -103,6 +103,12 @@
             background-color: #0f172a;
             color: var(--text-color);
             box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 120px;
         }
 
         button[type="submit"] {
@@ -171,11 +177,10 @@
         </section>
 
         <section>
-            <h2>Upload Your CV</h2>
-            <p>Are you looking to share your CV or profile? Use the form below to upload it directly.</p>
+            <h2>Share Your Profile or CV</h2>
+            <p>Want to connect or share your CV link? Send a message below and include a link to your LinkedIn or CV document.</p>
             
-            <!-- Connected to your Formspree endpoint -->
-            <form action="https://formspree.io/f/xppqpdyj" method="POST" enctype="multipart/form-data">
+            <form action="https://formspree.io/f/xppqpdyj" method="POST">
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required placeholder="Enter your full name">
@@ -187,11 +192,11 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="cv-file">Upload CV (PDF or Word)</label>
-                    <input type="file" id="cv-file" name="upload" accept=".pdf,.doc,.docx" required>
+                    <label for="message">Message & CV / Profile Link</label>
+                    <textarea id="message" name="message" required placeholder="Paste your Google Drive CV link, LinkedIn profile, or message here..."></textarea>
                 </div>
                 
-                <button type="submit">Submit CV</button>
+                <button type="submit">Send Message</button>
             </form>
         </section>
 
